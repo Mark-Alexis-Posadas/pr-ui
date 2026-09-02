@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>NNP Review</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .page-header {
+        margin-bottom: 25px;
+      }
+
+      .card-section {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+      }
+
+      .section-title {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .section-header {
+        border-bottom: 1px solid #dee2e6;
+        padding: 15px 20px;
+      }
+
+      .section-body {
+        padding: 20px;
+      }
+
+      .info-label {
+        font-size: 13px;
+        color: #6c757d;
+        margin-bottom: 3px;
+      }
+
+      .info-value {
+        font-weight: 600;
+      }
+
+      .status-badge {
+        font-size: 12px;
+        padding: 7px 12px;
+        border-radius: 20px;
+        font-weight: 600;
+      }
+
+      .status-review {
+        background-color: #cff4fc;
+        color: #055160;
+      }
+
+      .attachment-item {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 12px 15px;
+        margin-bottom: 10px;
+      }
+
+      .review-actions {
+        position: sticky;
+        bottom: 0;
+        background: white;
+        border-top: 1px solid #dee2e6;
+        padding: 15px 20px;
+        z-index: 10;
+      }
+
+      .readonly-box {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
+        padding: 10px 12px;
+        min-height: 42px;
+      }
+
+      .modal-success-icon {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background-color: #d1e7dd;
+        color: #0f5132;
+        font-size: 30px;
+      }
+
+      .modal-warning-icon {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background-color: #fff3cd;
+        color: #856404;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid py-4">
+      <!-- ========================================================= -->
+      <!-- PAGE HEADER -->
+      <!-- ========================================================= -->
+
+      <div class="page-header">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h3 class="fw-bold mb-1">NNP Review</h3>
+
+            <p class="text-muted mb-0">
+              Review the submitted Notice of Negotiated Procurement before
+              approval.
+            </p>
+          </div>
+
+          <div>
+            <span class="status-badge status-review"> FOR REVIEW </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- SUBMISSION INFORMATION -->
+      <!-- ========================================================= -->
+
+      <div class="card card-section">
+        <div class="section-header">
+          <div class="section-title">Submission Information</div>
+        </div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="info-label">NNP Reference</div>
+
+              <div class="info-value">NNP-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Submitted Date</div>
+
+              <div class="info-value">August 26, 2026</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Submitted By</div>
+
+              <div class="info-value">Procurement Officer</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Status</div>
+
+              <div>
+                <span class="status-badge status-review"> FOR REVIEW </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- PURCHASE REQUEST INFORMATION -->
+      <!-- ========================================================= -->
+
+      <div class="card card-section">
+        <div class="section-header">
+          <div class="section-title">Purchase Request Information</div>
+        </div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="info-label">PR Number</div>
+
+              <div class="info-value">2026-08-0113</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">PR Date</div>
+
+              <div class="info-value">August 26, 2026</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-label">Office</div>
+
+              <div class="info-value">
+                Management Information Services Office
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Requisitioner</div>
+
+              <div class="info-value">Jessabel D.</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">ABC</div>
+
+              <div class="info-value">₱40,000.00</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-label">Procurement Mode</div>
+
+              <div class="info-value">Negotiated Procurement - Shopping</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- NNP INFORMATION -->
+      <!-- ========================================================= -->
+
+      <div class="card card-section">
+        <div class="section-header">
+          <div class="section-title">
+            Notice of Negotiated Procurement Information
+          </div>
+        </div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="info-label">NNP Reference No.</div>
+
+              <div class="readonly-box">NNP-2026-001</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Notice Date</div>
+
+              <div class="readonly-box">August 26, 2026</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Procurement Title</div>
+
+              <div class="readonly-box">Procurement System</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-label">Delivery Location</div>
+
+              <div class="readonly-box">Main Office</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Delivery Period</div>
+
+              <div class="readonly-box">30 Calendar Days</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Source of Funds</div>
+
+              <div class="readonly-box">General Fund</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-label">Deadline for Submission of Quotation</div>
+
+              <div class="readonly-box">September 02, 2026 - 5:00 PM</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-label">Contact Person</div>
+
+              <div class="readonly-box">Procurement Officer</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-label">Contact Number / Email</div>
+
+              <div class="readonly-box">procurement@example.gov.ph</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- PROCUREMENT ITEMS -->
+      <!-- ========================================================= -->
+
+      <div class="card card-section">
+        <div class="section-header">
+          <div class="section-title">Procurement Items</div>
+        </div>
+
+        <div class="section-body">
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th width="60">#</th>
+
+                  <th>Description</th>
+
+                  <th width="100">Qty</th>
+
+                  <th width="100">Unit</th>
+
+                  <th width="150" class="text-end">Unit Price</th>
+
+                  <th width="150" class="text-end">Total</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1</td>
+
+                  <td>Procurement System</td>
+
+                  <td>1</td>
+
+                  <td>Lot</td>
+
+                  <td class="text-end">₱40,000.00</td>
+
+                  <td class="text-end fw-semibold">₱40,000.00</td>
+                </tr>
+              </tbody>
+
+              <tfoot>
+                <tr>
+                  <td colspan="5" class="text-end fw-bold">Total ABC</td>
+
+                  <td class="text-end fw-bold">₱40,000.00</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- QUOTATION REQUIREMENTS -->
+      <!-- ========================================================= -->
+
+      <div class="card card-section">
+        <div class="section-header">
+          <div class="section-title">Quotation Requirements</div>
+        </div>
+
+        <div class="section-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <span class="text-success fw-bold"> ✓ </span>
+
+                Valid Business Permit
+              </div>
+
+              <div class="mb-3">
+                <span class="text-success fw-bold"> ✓ </span>
+
+                PhilGEPS Registration
+              </div>
+
+              <div class="mb-3">
+                <span class="text-success fw-bold"> ✓ </span>
+
+                Omnibus Sworn Statement
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="mb-3">
+                <span class="text-success fw-bold"> ✓ </span>
+
+                BIR Registration / Certificate
+              </div>
+
+              <div class="mb-3">
+                <span class="text-success fw-bold"> ✓ </span>
+
+                Mayor's Permit
+              </div>
+
+              <div class="mb-3">
+                <span class="text-success fw-bold"> ✓ </span>
+
+                Other Requirements
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- ADDITIONAL INSTRUCTIONS -->
+      <!-- ========================================================= -->
+
+      <div class="card card-section">
+        <div class="section-header">
+          <div class="section-title">Additional Instructions</div>
+        </div>
+
+        <div class="section-body">
+          <div class="readonly-box">
+            Suppliers are requested to submit their quotation together with all
+            required supporting documents before the stated deadline.
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- ATTACHMENTS -->
+      <!-- ========================================================= -->
+
+      <div class="card card-section">
+        <div class="section-header">
+          <div class="section-title">Attachments</div>
+        </div>
+
+        <div class="section-body">
+          <div class="attachment-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="fw-semibold">📄 NNP Document.pdf</div>
+
+                <small class="text-muted"> PDF Document </small>
+              </div>
+
+              <button type="button" class="btn btn-sm btn-outline-primary">
+                View
+              </button>
+            </div>
+          </div>
+
+          <div class="attachment-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="fw-semibold">📄 Technical Specifications.pdf</div>
+
+                <small class="text-muted"> PDF Document </small>
+              </div>
+
+              <button type="button" class="btn btn-sm btn-outline-primary">
+                View
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================= -->
+      <!-- REVIEW REMARKS -->
+      <!-- ========================================================= -->
+
+      <div class="card card-section">
+        <div class="section-header">
+          <div class="section-title">Review Remarks</div>
+        </div>
+
+        <div class="section-body">
+          <label class="form-label fw-semibold">
+            Remarks
+
+            <span class="text-muted fw-normal"> (Optional for approval) </span>
+          </label>
+
+          <textarea
+            class="form-control"
+            id="reviewRemarks"
+            rows="4"
+            placeholder="Enter review remarks..."
+          ></textarea>
+
+          <div class="form-text">
+            Provide comments or observations regarding this NNP.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- STICKY REVIEW ACTIONS -->
+    <!-- ============================================================= -->
+
+    <div class="review-actions">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="history.back()"
+          >
+            Back
+          </button>
+
+          <div class="d-flex gap-2">
+            <button
+              type="button"
+              class="btn btn-outline-danger"
+              id="returnForRevisionButton"
+            >
+              Return for Revision
+            </button>
+
+            <button type="button" class="btn btn-success" id="approveNnpButton">
+              Approve NNP
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- APPROVE NNP MODAL -->
+    <!-- ============================================================= -->
+
+    <div
+      class="modal fade"
+      id="approveNnpModal"
+      tabindex="-1"
+      aria-labelledby="approveNnpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="approveNnpModalLabel">
+              Approve Notice of Negotiated Procurement?
+            </h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <p class="text-muted">
+              Please confirm that you have reviewed the submitted NNP and want
+              to approve it.
+            </p>
+
+            <div class="row mb-2">
+              <div class="col-5 text-muted">NNP Reference</div>
+
+              <div class="col-7 fw-semibold">NNP-2026-001</div>
+            </div>
+
+            <div class="row mb-2">
+              <div class="col-5 text-muted">PR Number</div>
+
+              <div class="col-7 fw-semibold">2026-08-0113</div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-5 text-muted">ABC</div>
+
+              <div class="col-7 fw-semibold">₱40,000.00</div>
+            </div>
+
+            <div class="alert alert-success mb-0">
+              <strong>Approval Confirmation</strong>
+
+              <div class="small mt-1">
+                Once approved, this NNP will proceed to the issue/post notice
+                stage.
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-success"
+              id="confirmApproveNnp"
+            >
+              Approve NNP
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- RETURN FOR REVISION MODAL -->
+    <!-- ============================================================= -->
+
+    <div
+      class="modal fade"
+      id="returnRevisionModal"
+      tabindex="-1"
+      aria-labelledby="returnRevisionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="returnRevisionModalLabel">
+              Return NNP for Revision?
+            </h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <p class="text-muted">
+              Please provide the reason or remarks for returning this NNP to the
+              preparer.
+            </p>
+
+            <div class="mb-3">
+              <label for="revisionRemarks" class="form-label fw-semibold">
+                Revision Remarks
+                <span class="text-danger">*</span>
+              </label>
+
+              <textarea
+                class="form-control"
+                id="revisionRemarks"
+                rows="5"
+                placeholder="Enter the reason for revision..."
+              ></textarea>
+
+              <div class="invalid-feedback" id="revisionRemarksError">
+                Please provide revision remarks.
+              </div>
+            </div>
+
+            <div class="alert alert-warning mb-0">
+              <strong>Note</strong>
+
+              <div class="small mt-1">
+                The NNP status will be changed to
+                <strong>REVISION REQUIRED</strong>. The preparer will be able to
+                edit and resubmit the NNP.
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-danger"
+              id="confirmReturnRevision"
+            >
+              Return for Revision
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- APPROVED SUCCESS MODAL -->
+    <!-- ============================================================= -->
+
+    <div
+      class="modal fade"
+      id="nnpApprovedModal"
+      tabindex="-1"
+      aria-labelledby="nnpApprovedModalLabel"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center p-4">
+            <div
+              class="modal-success-icon d-flex justify-content-center align-items-center mx-auto mb-3"
+            >
+              ✓
+            </div>
+
+            <h4 class="fw-bold mb-3" id="nnpApprovedModalLabel">
+              NNP Approved Successfully
+            </h4>
+
+            <p class="text-muted mb-3">
+              <strong>NNP-2026-001</strong>
+              has been approved.
+            </p>
+
+            <div class="mb-4">
+              <span class="text-muted"> Status: </span>
+
+              <span class="badge bg-success ms-1"> APPROVED </span>
+            </div>
+
+            <div class="alert alert-info text-start">
+              <strong>Next Step</strong>
+
+              <div class="small mt-1">
+                The NNP is now ready for the
+                <strong>Issue / Post Notice</strong>
+                stage.
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary px-4" id="approvedOk">
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- RETURN SUCCESS MODAL -->
+    <!-- ============================================================= -->
+
+    <div
+      class="modal fade"
+      id="revisionReturnedModal"
+      tabindex="-1"
+      aria-labelledby="revisionReturnedModalLabel"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center p-4">
+            <div
+              class="modal-warning-icon d-flex justify-content-center align-items-center mx-auto mb-3"
+            >
+              !
+            </div>
+
+            <h4 class="fw-bold mb-3" id="revisionReturnedModalLabel">
+              NNP Returned for Revision
+            </h4>
+
+            <p class="text-muted mb-3">
+              <strong>NNP-2026-001</strong>
+              has been returned to the preparer for revision.
+            </p>
+
+            <div class="mb-4">
+              <span class="text-muted"> Status: </span>
+
+              <span class="badge bg-danger ms-1"> REVISION REQUIRED </span>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary px-4"
+              id="revisionReturnedOk"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- BOOTSTRAP JS -->
+    <!-- ============================================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ============================================================= -->
+    <!-- PAGE JAVASCRIPT -->
+    <!-- ============================================================= -->
+
+    <script>
+      /*
+    |--------------------------------------------------------------------------
+    | MODAL INSTANCES
+    |--------------------------------------------------------------------------
+    */
+
+      const approveNnpModalElement = document.getElementById("approveNnpModal");
+
+      const returnRevisionModalElement = document.getElementById(
+        "returnRevisionModal",
+      );
+
+      const nnpApprovedModalElement =
+        document.getElementById("nnpApprovedModal");
+
+      const revisionReturnedModalElement = document.getElementById(
+        "revisionReturnedModal",
+      );
+
+      const approveNnpModal = new bootstrap.Modal(approveNnpModalElement);
+
+      const returnRevisionModal = new bootstrap.Modal(
+        returnRevisionModalElement,
+      );
+
+      const nnpApprovedModal = new bootstrap.Modal(nnpApprovedModalElement);
+
+      const revisionReturnedModal = new bootstrap.Modal(
+        revisionReturnedModalElement,
+      );
+
+      /*
+    |--------------------------------------------------------------------------
+    | APPROVE NNP BUTTON
+    |--------------------------------------------------------------------------
+    */
+
+      document
+        .getElementById("approveNnpButton")
+        .addEventListener("click", function () {
+          approveNnpModal.show();
+        });
+
+      /*
+    |--------------------------------------------------------------------------
+    | CONFIRM APPROVE NNP
+    |--------------------------------------------------------------------------
+    */
+
+      document
+        .getElementById("confirmApproveNnp")
+        .addEventListener("click", function () {
+          /*
+           * Later this will be:
+           *
+           * POST /nnp/{id}/approve
+           *
+           * status = APPROVED
+           */
+
+          approveNnpModal.hide();
+
+          setTimeout(function () {
+            nnpApprovedModal.show();
+          }, 300);
+        });
+
+      /*
+    |--------------------------------------------------------------------------
+    | APPROVED - OK
+    |--------------------------------------------------------------------------
+    */
+
+      document
+        .getElementById("approvedOk")
+        .addEventListener("click", function () {
+          /*
+           * Later:
+           *
+           * window.location.href = "/nnp";
+           *
+           * or:
+           *
+           * window.location.href = "/nnp/approved";
+           */
+
+          window.location.href = "nnp-list.html";
+        });
+
+      /*
+    |--------------------------------------------------------------------------
+    | RETURN FOR REVISION BUTTON
+    |--------------------------------------------------------------------------
+    */
+
+      document
+        .getElementById("returnForRevisionButton")
+        .addEventListener("click", function () {
+          returnRevisionModal.show();
+        });
+
+      /*
+    |--------------------------------------------------------------------------
+    | CONFIRM RETURN FOR REVISION
+    |--------------------------------------------------------------------------
+    */
+
+      document
+        .getElementById("confirmReturnRevision")
+        .addEventListener("click", function () {
+          const remarks = document.getElementById("revisionRemarks");
+
+          const error = document.getElementById("revisionRemarksError");
+
+          /*
+           * REQUIRED REMARKS
+           */
+
+          if (remarks.value.trim() === "") {
+            remarks.classList.add("is-invalid");
+
+            return;
+          }
+
+          remarks.classList.remove("is-invalid");
+
+          /*
+           * Later this will be:
+           *
+           * POST /nnp/{id}/return
+           *
+           * status = REVISION_REQUIRED
+           *
+           * remarks = remarks.value
+           */
+
+          returnRevisionModal.hide();
+
+          setTimeout(function () {
+            revisionReturnedModal.show();
+          }, 300);
+        });
+
+      /*
+    |--------------------------------------------------------------------------
+    | CLEAR VALIDATION WHEN USER TYPES
+    |--------------------------------------------------------------------------
+    */
+
+      document
+        .getElementById("revisionRemarks")
+        .addEventListener("input", function () {
+          this.classList.remove("is-invalid");
+        });
+
+      /*
+    |--------------------------------------------------------------------------
+    | REVISION RETURNED - OK
+    |--------------------------------------------------------------------------
+    */
+
+      document
+        .getElementById("revisionReturnedOk")
+        .addEventListener("click", function () {
+          /*
+           * Later:
+           *
+           * window.location.href = "/nnp";
+           */
+
+          window.location.href = "nnp-list.html";
+        });
+    </script>
+  </body>
+</html>
