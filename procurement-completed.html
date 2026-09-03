@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Procurement Completed</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: #f5f7fa;
+        font-family: Arial, sans-serif;
+      }
+
+      .page-header {
+        background: #fff;
+        border-bottom: 1px solid #dee2e6;
+        padding: 20px 0;
+      }
+
+      .section-card {
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .section-header {
+        padding: 15px 20px;
+        border-bottom: 1px solid #dee2e6;
+        font-weight: 600;
+      }
+
+      .section-body {
+        padding: 20px;
+      }
+
+      .info-label {
+        font-size: 12px;
+        color: #6c757d;
+        margin-bottom: 3px;
+      }
+
+      .info-value {
+        font-weight: 500;
+      }
+
+      .status-completed {
+        background: #198754;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .summary-box {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 16px;
+        height: 100%;
+      }
+
+      .summary-label {
+        color: #6c757d;
+        font-size: 13px;
+      }
+
+      .summary-value {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 5px;
+      }
+
+      .savings {
+        color: #198754;
+      }
+
+      .timeline {
+        position: relative;
+        margin-left: 12px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 9px;
+        top: 10px;
+        bottom: 10px;
+        width: 2px;
+        background: #198754;
+      }
+
+      .timeline-item {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 18px;
+      }
+
+      .timeline-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #198754;
+        color: #fff;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        z-index: 1;
+      }
+
+      .timeline-content {
+        flex: 1;
+      }
+
+      .timeline-title {
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      .timeline-date {
+        font-size: 12px;
+        color: #6c757d;
+      }
+
+      .document-row {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 12px 15px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .document-name {
+        font-weight: 500;
+      }
+
+      .document-type {
+        font-size: 12px;
+        color: #6c757d;
+      }
+
+      .audit-row {
+        border-bottom: 1px solid #eee;
+        padding: 12px 0;
+      }
+
+      .audit-row:last-child {
+        border-bottom: none;
+      }
+
+      .audit-action {
+        font-weight: 600;
+      }
+
+      .audit-meta {
+        font-size: 12px;
+        color: #6c757d;
+      }
+
+      .sticky-actions {
+        position: sticky;
+        bottom: 0;
+        background: #fff;
+        border-top: 1px solid #dee2e6;
+        padding: 15px 0;
+        margin-top: 20px;
+        z-index: 10;
+      }
+
+      .completion-banner {
+        background: #e9f7ef;
+        border: 1px solid #badbcc;
+        border-radius: 10px;
+        padding: 18px 20px;
+        margin-bottom: 20px;
+      }
+
+      .completion-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: #198754;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="page-header">
+      <div class="container-fluid px-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h4 class="mb-1">Procurement Completed</h4>
+            <div class="text-muted">
+              Final procurement record and completion summary
+            </div>
+          </div>
+
+          <div class="text-end">
+            <span class="status-completed">COMPLETED</span>
+            <div class="small text-muted mt-2">NNP-2026-001</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid px-4 py-4">
+      <!-- COMPLETION BANNER -->
+      <div class="completion-banner">
+        <div class="d-flex align-items-center">
+          <div class="completion-icon me-3">✓</div>
+
+          <div>
+            <h5 class="mb-1">Procurement Successfully Completed</h5>
+
+            <div class="text-muted">
+              This procurement has completed delivery, inspection, acceptance,
+              and payment processing.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROCUREMENT INFORMATION -->
+      <div class="section-card">
+        <div class="section-header">Procurement Information</div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="info-label">Purchase Request No.</div>
+              <div class="info-value">2026-08-0113</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">NNP Reference</div>
+              <div class="info-value">NNP-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Award Reference</div>
+              <div class="info-value">AW-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Purchase Order</div>
+              <div class="info-value">PO-2026-001</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-label">Procurement Title</div>
+              <div class="info-value">Procurement System</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Office</div>
+              <div class="info-value">
+                Management Information Services Office
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Completion Date</div>
+              <div class="info-value">September 15, 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPLETION SUMMARY -->
+      <div class="section-card">
+        <div class="section-header">Completion Summary</div>
+
+        <div class="section-body">
+          <div class="row g-3">
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-label">Approved Budget for Contract</div>
+                <div class="summary-value">₱40,000.00</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-label">Award Amount</div>
+                <div class="summary-value">₱36,500.00</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-label">Total Paid</div>
+                <div class="summary-value">₱36,500.00</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-label">Savings</div>
+                <div class="summary-value savings">₱3,500.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AWARD / SUPPLIER -->
+      <div class="section-card">
+        <div class="section-header">Awarded Supplier</div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="info-label">Supplier</div>
+              <div class="info-value">ABC Office Supplies</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Supplier Contact</div>
+              <div class="info-value">Juan Dela Cruz</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Contact Number</div>
+              <div class="info-value">0917 123 4567</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Supplier Address</div>
+              <div class="info-value">Lingayen, Pangasinan</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Award Basis</div>
+              <div class="info-value">Lowest Responsive Quotation</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Award Amount</div>
+              <div class="info-value">₱36,500.00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DELIVERY & ACCEPTANCE -->
+      <div class="section-card">
+        <div class="section-header">Delivery & Inspection / Acceptance</div>
+
+        <div class="section-body">
+          <div class="row g-3 mb-4">
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-label">PO Quantity</div>
+                <div class="summary-value">1 Lot</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-label">Delivered</div>
+                <div class="summary-value">1 Lot</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-label">Accepted</div>
+                <div class="summary-value">1 Lot</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-label">Rejected</div>
+                <div class="summary-value">0</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="info-label">Delivery Reference</div>
+              <div class="info-value">DEL-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Delivery Receipt</div>
+              <div class="info-value">DR-2026-045</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Inspection Reference</div>
+              <div class="info-value">IAR-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Inspection Result</div>
+              <span class="badge text-bg-success"> ACCEPTED </span>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Delivery Date</div>
+              <div class="info-value">September 10, 2026</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Inspection Date</div>
+              <div class="info-value">September 11, 2026</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Received By</div>
+              <div class="info-value">Maria Santos</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Inspected By</div>
+              <div class="info-value">Inspection Committee</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAYMENT SUMMARY -->
+      <div class="section-card">
+        <div class="section-header">Payment Summary</div>
+
+        <div class="section-body">
+          <div class="row g-3">
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-label">PO Amount</div>
+                <div class="summary-value">₱36,500.00</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-label">Accepted Amount</div>
+                <div class="summary-value">₱36,500.00</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-label">Total Paid</div>
+                <div class="summary-value">₱36,500.00</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-label">Remaining Payable</div>
+                <div class="summary-value">₱0.00</div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="info-label">Payment Reference</div>
+              <div class="info-value">PAY-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Payment Date</div>
+              <div class="info-value">September 15, 2026</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Payment Method</div>
+              <div class="info-value">Government Check</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Payment Status</div>
+              <span class="badge text-bg-success"> PAID </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROCUREMENT TIMELINE -->
+      <div class="section-card">
+        <div class="section-header">Procurement Timeline</div>
+
+        <div class="section-body">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-icon">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-title">Purchase Request Approved</div>
+                <div class="timeline-date">August 26, 2026</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-title">Procurement Mode Approved</div>
+                <div class="timeline-date">August 26, 2026</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-title">NNP Approved</div>
+                <div class="timeline-date">August 27, 2026</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-title">Notice Issued / Posted</div>
+                <div class="timeline-date">August 28, 2026</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-title">Quotations Received</div>
+                <div class="timeline-date">September 2, 2026</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-title">Quotation Evaluation Completed</div>
+                <div class="timeline-date">September 2, 2026</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-title">Award Approved</div>
+                <div class="timeline-date">September 3, 2026</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-title">Notice of Award Issued</div>
+                <div class="timeline-date">September 3, 2026</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-title">Purchase Order Issued</div>
+                <div class="timeline-date">September 3, 2026</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-title">Delivery Completed</div>
+                <div class="timeline-date">September 10, 2026</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-title">
+                  Inspection & Acceptance Completed
+                </div>
+                <div class="timeline-date">September 11, 2026</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-title">Payment Processed</div>
+                <div class="timeline-date">September 15, 2026</div>
+              </div>
+            </div>
+
+            <div class="timeline-item mb-0">
+              <div class="timeline-icon">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-title">Procurement Completed</div>
+                <div class="timeline-date">September 15, 2026</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DOCUMENTS -->
+      <div class="section-card">
+        <div class="section-header">Complete Procurement Documents</div>
+
+        <div class="section-body">
+          <div class="document-row">
+            <div>
+              <div class="document-name">Purchase Request</div>
+              <div class="document-type">PR-2026-08-0113.pdf</div>
+            </div>
+
+            <div>
+              <button class="btn btn-sm btn-outline-primary">View</button>
+              <button class="btn btn-sm btn-outline-secondary">Download</button>
+            </div>
+          </div>
+
+          <div class="document-row">
+            <div>
+              <div class="document-name">Notice of Negotiated Procurement</div>
+              <div class="document-type">NNP-2026-001.pdf</div>
+            </div>
+
+            <div>
+              <button class="btn btn-sm btn-outline-primary">View</button>
+              <button class="btn btn-sm btn-outline-secondary">Download</button>
+            </div>
+          </div>
+
+          <div class="document-row">
+            <div>
+              <div class="document-name">Supplier Quotations</div>
+              <div class="document-type">3 quotation documents</div>
+            </div>
+
+            <button
+              class="btn btn-sm btn-outline-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#quotationsModal"
+            >
+              View Documents
+            </button>
+          </div>
+
+          <div class="document-row">
+            <div>
+              <div class="document-name">Quotation Evaluation</div>
+              <div class="document-type">Evaluation-2026-001.pdf</div>
+            </div>
+
+            <div>
+              <button class="btn btn-sm btn-outline-primary">View</button>
+              <button class="btn btn-sm btn-outline-secondary">Download</button>
+            </div>
+          </div>
+
+          <div class="document-row">
+            <div>
+              <div class="document-name">Quotation Abstract</div>
+              <div class="document-type">AB-2026-001.pdf</div>
+            </div>
+
+            <div>
+              <button class="btn btn-sm btn-outline-primary">View</button>
+              <button class="btn btn-sm btn-outline-secondary">Download</button>
+            </div>
+          </div>
+
+          <div class="document-row">
+            <div>
+              <div class="document-name">Recommendation for Award</div>
+              <div class="document-type">ROA-2026-001.pdf</div>
+            </div>
+
+            <div>
+              <button class="btn btn-sm btn-outline-primary">View</button>
+              <button class="btn btn-sm btn-outline-secondary">Download</button>
+            </div>
+          </div>
+
+          <div class="document-row">
+            <div>
+              <div class="document-name">Award Approval</div>
+              <div class="document-type">AW-2026-001.pdf</div>
+            </div>
+
+            <div>
+              <button class="btn btn-sm btn-outline-primary">View</button>
+              <button class="btn btn-sm btn-outline-secondary">Download</button>
+            </div>
+          </div>
+
+          <div class="document-row">
+            <div>
+              <div class="document-name">Notice of Award</div>
+              <div class="document-type">NOA-2026-001.pdf</div>
+            </div>
+
+            <div>
+              <button class="btn btn-sm btn-outline-primary">View</button>
+              <button class="btn btn-sm btn-outline-secondary">Download</button>
+            </div>
+          </div>
+
+          <div class="document-row">
+            <div>
+              <div class="document-name">Purchase Order</div>
+              <div class="document-type">PO-2026-001.pdf</div>
+            </div>
+
+            <div>
+              <button class="btn btn-sm btn-outline-primary">View</button>
+              <button class="btn btn-sm btn-outline-secondary">Download</button>
+            </div>
+          </div>
+
+          <div class="document-row">
+            <div>
+              <div class="document-name">Delivery Receipt</div>
+              <div class="document-type">DR-2026-045.pdf</div>
+            </div>
+
+            <div>
+              <button class="btn btn-sm btn-outline-primary">View</button>
+              <button class="btn btn-sm btn-outline-secondary">Download</button>
+            </div>
+          </div>
+
+          <div class="document-row">
+            <div>
+              <div class="document-name">Inspection & Acceptance Report</div>
+              <div class="document-type">IAR-2026-001.pdf</div>
+            </div>
+
+            <div>
+              <button class="btn btn-sm btn-outline-primary">View</button>
+              <button class="btn btn-sm btn-outline-secondary">Download</button>
+            </div>
+          </div>
+
+          <div class="document-row mb-0">
+            <div>
+              <div class="document-name">Payment Documents</div>
+              <div class="document-type">
+                PAY-2026-001 and supporting documents
+              </div>
+            </div>
+
+            <button
+              class="btn btn-sm btn-outline-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#paymentDocsModal"
+            >
+              View Documents
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- AUDIT TRAIL -->
+      <div class="section-card">
+        <div class="section-header">Procurement History / Audit Trail</div>
+
+        <div class="section-body">
+          <div class="audit-row">
+            <div class="audit-action">Procurement Completed</div>
+            <div class="audit-meta">
+              September 15, 2026 · 03:45 PM · Procurement Officer
+            </div>
+          </div>
+
+          <div class="audit-row">
+            <div class="audit-action">Payment Processed</div>
+            <div class="audit-meta">
+              September 15, 2026 · 03:42 PM · Accounting Office
+            </div>
+          </div>
+
+          <div class="audit-row">
+            <div class="audit-action">Inspection & Acceptance Completed</div>
+            <div class="audit-meta">
+              September 11, 2026 · 02:15 PM · Inspection Committee
+            </div>
+          </div>
+
+          <div class="audit-row">
+            <div class="audit-action">Delivery Recorded</div>
+            <div class="audit-meta">
+              September 10, 2026 · 10:30 AM · Receiving Office
+            </div>
+          </div>
+
+          <div class="audit-row">
+            <div class="audit-action">Purchase Order Issued</div>
+            <div class="audit-meta">
+              September 3, 2026 · 04:10 PM · BAC Secretariat
+            </div>
+          </div>
+
+          <div class="audit-row">
+            <div class="audit-action">Notice of Award Issued</div>
+            <div class="audit-meta">
+              September 3, 2026 · 03:30 PM · BAC Secretariat
+            </div>
+          </div>
+
+          <div class="audit-row">
+            <div class="audit-action">Award Approved</div>
+            <div class="audit-meta">
+              September 3, 2026 · 02:45 PM · Approving Authority
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FINAL ACTIONS -->
+      <div class="sticky-actions">
+        <div class="container-fluid px-0">
+          <div class="d-flex justify-content-between align-items-center">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              onclick="goBack()"
+            >
+              ← Back to Procurement List
+            </button>
+
+            <div class="d-flex gap-2">
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                onclick="viewCompleteRecord()"
+              >
+                View Complete Record
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="downloadCompleteFile()"
+              >
+                Download Complete Procurement File
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUOTATIONS MODAL -->
+    <div
+      class="modal fade"
+      id="quotationsModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Supplier Quotations</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="list-group">
+              <div
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <strong>ABC Office Supplies</strong>
+                  <div class="small text-muted">QT-2026-016 · ₱36,500.00</div>
+                </div>
+
+                <button class="btn btn-sm btn-outline-primary">View</button>
+              </div>
+
+              <div
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <strong>XYZ Trading</strong>
+                  <div class="small text-muted">QT-2026-015 · ₱38,000.00</div>
+                </div>
+
+                <button class="btn btn-sm btn-outline-primary">View</button>
+              </div>
+
+              <div
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <strong>Juan Trading</strong>
+                  <div class="small text-muted">QT-2026-017 · ₱39,500.00</div>
+                </div>
+
+                <button class="btn btn-sm btn-outline-primary">View</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAYMENT DOCUMENTS MODAL -->
+    <div
+      class="modal fade"
+      id="paymentDocsModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Payment Documents</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="list-group">
+              <div
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <strong>Payment Record</strong>
+                  <div class="small text-muted">PAY-2026-001</div>
+                </div>
+
+                <button class="btn btn-sm btn-outline-primary">View</button>
+              </div>
+
+              <div
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <strong>Payment Voucher</strong>
+                  <div class="small text-muted">Payment voucher document</div>
+                </div>
+
+                <button class="btn btn-sm btn-outline-primary">View</button>
+              </div>
+
+              <div
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <strong>Proof of Payment</strong>
+                  <div class="small text-muted">
+                    Government check / payment proof
+                  </div>
+                </div>
+
+                <button class="btn btn-sm btn-outline-primary">View</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPLETE RECORD MODAL -->
+    <div
+      class="modal fade"
+      id="completeRecordModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Complete Procurement Record</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="alert alert-success">
+              <strong>Procurement Completed.</strong>
+              All major procurement stages have been completed and recorded.
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <strong>PR No.</strong>
+                <div>2026-08-0113</div>
+              </div>
+
+              <div class="col-md-6">
+                <strong>Supplier</strong>
+                <div>ABC Office Supplies</div>
+              </div>
+
+              <div class="col-md-6">
+                <strong>PO Amount</strong>
+                <div>₱36,500.00</div>
+              </div>
+
+              <div class="col-md-6">
+                <strong>Total Paid</strong>
+                <div>₱36,500.00</div>
+              </div>
+
+              <div class="col-md-6">
+                <strong>Delivery</strong>
+                <div>1 Lot / Complete</div>
+              </div>
+
+              <div class="col-md-6">
+                <strong>Acceptance</strong>
+                <div>Accepted</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      function goBack() {
+        window.location.href = "procurement-list.html";
+      }
+
+      function viewCompleteRecord() {
+        const modal = new bootstrap.Modal(
+          document.getElementById("completeRecordModal"),
+        );
+
+        modal.show();
+      }
+
+      function downloadCompleteFile() {
+        alert(
+          "Complete Procurement File download will be connected to Laravel storage.",
+        );
+      }
+    </script>
+  </body>
+</html>

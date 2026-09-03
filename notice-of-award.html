@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Notice of Award</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: #f5f6f8;
+      }
+
+      .page-header {
+        background: #fff;
+        border-bottom: 1px solid #dee2e6;
+        padding: 20px 0;
+      }
+
+      .section-card {
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .section-header {
+        padding: 15px 20px;
+        border-bottom: 1px solid #dee2e6;
+        font-weight: 600;
+      }
+
+      .section-body {
+        padding: 20px;
+      }
+
+      .info-label {
+        font-size: 13px;
+        color: #6c757d;
+        margin-bottom: 3px;
+      }
+
+      .info-value {
+        font-weight: 500;
+      }
+
+      .award-box {
+        border: 2px solid #198754;
+        border-radius: 8px;
+        background: #f0fff7;
+        padding: 25px;
+      }
+
+      .award-amount {
+        font-size: 30px;
+        font-weight: 700;
+        color: #198754;
+      }
+
+      .document-preview {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        background: #f8f9fa;
+        min-height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .document-icon {
+        font-size: 50px;
+      }
+
+      .document-row {
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
+        padding: 12px 15px;
+        margin-bottom: 10px;
+      }
+
+      .sticky-actions {
+        position: sticky;
+        bottom: 0;
+        z-index: 100;
+        background: #fff;
+        border-top: 1px solid #dee2e6;
+        padding: 15px 0;
+        margin-top: 30px;
+      }
+
+      .notice-status {
+        font-size: 13px;
+      }
+
+      .timeline {
+        border-left: 2px solid #dee2e6;
+        padding-left: 20px;
+      }
+
+      .timeline-item {
+        margin-bottom: 20px;
+      }
+
+      .timeline-title {
+        font-weight: 600;
+      }
+
+      .timeline-date {
+        font-size: 13px;
+        color: #6c757d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- PAGE HEADER -->
+
+    <div class="page-header">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h4 class="mb-1">Notice of Award</h4>
+
+            <div class="text-muted">
+              NNP-2026-001
+
+              <span class="mx-2">•</span>
+
+              PR-2026-08-0113
+            </div>
+          </div>
+
+          <div>
+            <span class="badge bg-success"> AWARD APPROVED </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <!-- AWARD INFORMATION -->
+
+      <div class="section-card">
+        <div class="section-header">Award Information</div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="info-label">PR Number</div>
+
+              <div class="info-value">2026-08-0113</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">NNP Reference</div>
+
+              <div class="info-value">NNP-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Award Reference</div>
+
+              <div class="info-value">AW-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Award Approval Date</div>
+
+              <div class="info-value">September 03, 2026</div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="info-label">Procurement Title</div>
+
+              <div class="info-value">Procurement System</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Procurement Mode</div>
+
+              <div class="info-value">Negotiated Procurement - Shopping</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- APPROVED AWARD -->
+
+      <div class="section-card">
+        <div class="section-header">Approved Award</div>
+
+        <div class="section-body">
+          <div class="award-box">
+            <div class="row align-items-center">
+              <div class="col-md-7">
+                <div class="text-muted small mb-1">AWARDEE</div>
+
+                <h4 class="mb-1">ABC Office Supplies</h4>
+
+                <div class="text-muted">Approved Supplier / Awardee</div>
+              </div>
+
+              <div class="col-md-5 text-md-end mt-3 mt-md-0">
+                <div class="text-muted small">APPROVED AWARD AMOUNT</div>
+
+                <div class="award-amount">₱36,500.00</div>
+
+                <div class="text-success small">₱3,500.00 below ABC</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTICE DETAILS -->
+
+      <div class="section-card">
+        <div class="section-header">Notice Details</div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <label class="form-label"> Notice Date </label>
+
+              <input
+                type="date"
+                class="form-control"
+                id="noticeDate"
+                value="2026-09-03"
+              />
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label"> Notice Reference </label>
+
+              <input
+                type="text"
+                class="form-control"
+                id="noticeReference"
+                value="NOA-2026-001"
+              />
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label"> Delivery Period </label>
+
+              <input
+                type="text"
+                class="form-control"
+                value="30 Calendar Days"
+                readonly
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label"> Delivery Location </label>
+
+              <input
+                type="text"
+                class="form-control"
+                value="Main Office"
+                readonly
+              />
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label"> Source of Funds </label>
+
+              <input
+                type="text"
+                class="form-control"
+                value="General Fund"
+                readonly
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AWARDEE DETAILS -->
+
+      <div class="section-card">
+        <div class="section-header">Awardee Details</div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="info-label">Supplier Name</div>
+
+              <div class="info-value">ABC Office Supplies</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-label">Quotation Reference</div>
+
+              <div class="info-value">QT-2026-016</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-label">Contact Person</div>
+
+              <div class="info-value">Juan Dela Cruz</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-label">Contact Number</div>
+
+              <div class="info-value">0917-000-0000</div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="info-label">Address</div>
+
+              <div class="info-value">Lingayen, Pangasinan</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Supplier Status</div>
+
+              <div>
+                <span class="badge bg-success"> APPROVED AWARDEE </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AWARD ITEMS -->
+
+      <div class="section-card">
+        <div class="section-header">Awarded Items</div>
+
+        <div class="section-body">
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>Procurement Item</th>
+
+                  <th class="text-center">Qty</th>
+
+                  <th class="text-end">ABC</th>
+
+                  <th class="text-end">Award Amount</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Procurement System</td>
+
+                  <td class="text-center">1 Lot</td>
+
+                  <td class="text-end">₱40,000.00</td>
+
+                  <td class="text-end fw-bold text-success">₱36,500.00</td>
+                </tr>
+
+                <tr class="table-light">
+                  <td colspan="2">
+                    <strong> Total Award </strong>
+                  </td>
+
+                  <td class="text-end">
+                    <strong> ₱40,000.00 </strong>
+                  </td>
+
+                  <td class="text-end">
+                    <strong class="text-success"> ₱36,500.00 </strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOA CONTENT -->
+
+      <div class="section-card">
+        <div
+          class="section-header d-flex justify-content-between align-items-center"
+        >
+          <span> Notice of Award Document </span>
+
+          <span class="notice-status text-muted"> Draft </span>
+        </div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <!-- PREVIEW -->
+
+            <div class="col-lg-8">
+              <div class="document-preview">
+                <div>
+                  <div class="document-icon">📄</div>
+
+                  <h5 class="mt-3">Notice of Award</h5>
+
+                  <div class="text-muted mb-3">NOA-2026-001.pdf</div>
+
+                  <button
+                    class="btn btn-outline-primary"
+                    onclick="previewNOA()"
+                  >
+                    Preview Document
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- DOCUMENT ACTIONS -->
+
+            <div class="col-lg-4">
+              <h6>Document Actions</h6>
+
+              <div class="d-grid gap-2 mt-3">
+                <button class="btn btn-outline-primary" onclick="previewNOA()">
+                  Preview NOA
+                </button>
+
+                <button
+                  class="btn btn-outline-secondary"
+                  onclick="generateNOA()"
+                >
+                  Generate PDF
+                </button>
+
+                <button
+                  class="btn btn-outline-secondary"
+                  onclick="downloadNOA()"
+                >
+                  Download PDF
+                </button>
+              </div>
+
+              <hr />
+
+              <div class="small text-muted">
+                The Notice of Award will contain the approved award information
+                and applicable procurement details.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUPPORTING DOCUMENTS -->
+
+      <div class="section-card">
+        <div class="section-header">Supporting Documents</div>
+
+        <div class="section-body">
+          <div
+            class="document-row d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <strong> Award Approval </strong>
+
+              <div class="small text-muted">AW-2026-001-approval.pdf</div>
+            </div>
+
+            <button class="btn btn-sm btn-outline-primary">View</button>
+          </div>
+
+          <div
+            class="document-row d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <strong> Recommendation for Award </strong>
+
+              <div class="small text-muted">ROA-2026-001.pdf</div>
+            </div>
+
+            <button class="btn btn-sm btn-outline-primary">View</button>
+          </div>
+
+          <div
+            class="document-row d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <strong> Quotation Abstract </strong>
+
+              <div class="small text-muted">AB-2026-001.pdf</div>
+            </div>
+
+            <button
+              class="btn btn-sm btn-outline-primary"
+              onclick="viewAbstract()"
+            >
+              View
+            </button>
+          </div>
+
+          <div
+            class="document-row d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <strong> Awardee Quotation </strong>
+
+              <div class="small text-muted">QT-2026-016.pdf</div>
+            </div>
+
+            <button class="btn btn-sm btn-outline-primary">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ISSUANCE DETAILS -->
+
+      <div class="section-card">
+        <div class="section-header">Issuance Details</div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <label class="form-label"> Issuance Method </label>
+
+              <select class="form-select" id="issuanceMethod">
+                <option selected>Electronic</option>
+
+                <option>Printed / Physical</option>
+
+                <option>Electronic and Physical</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label"> Issued By </label>
+
+              <input
+                type="text"
+                class="form-control"
+                value="BAC Secretariat"
+                readonly
+              />
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label"> Issuance Date </label>
+
+              <input
+                type="date"
+                class="form-control"
+                id="issuanceDate"
+                value="2026-09-03"
+              />
+            </div>
+
+            <div class="col-md-12">
+              <label class="form-label"> Issuance Remarks </label>
+
+              <textarea
+                class="form-control"
+                id="issuanceRemarks"
+                rows="3"
+                placeholder="Enter any relevant issuance remarks..."
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROCUREMENT HISTORY -->
+
+      <div class="section-card">
+        <div class="section-header">Procurement History</div>
+
+        <div class="section-body">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-title">Award Approved</div>
+
+              <div class="timeline-date">September 03, 2026</div>
+
+              <div class="text-muted small">
+                Award approved for ABC Office Supplies in the amount of
+                ₱36,500.00.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-title">
+                Recommendation for Award Submitted
+              </div>
+
+              <div class="timeline-date">September 03, 2026</div>
+
+              <div class="text-muted small">
+                Recommendation submitted for approval.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-title">Quotation Abstract Completed</div>
+
+              <div class="timeline-date">September 02, 2026</div>
+
+              <div class="text-muted small">
+                Lowest responsive quotation identified.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-title">Quotations Evaluated</div>
+
+              <div class="timeline-date">September 02, 2026</div>
+
+              <div class="text-muted small">
+                Three supplier quotations evaluated.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-title">Notice Issued / Posted</div>
+
+              <div class="timeline-date">September 01, 2026</div>
+
+              <div class="text-muted small">
+                Supplier quotation period opened.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STICKY ACTIONS -->
+
+      <div class="sticky-actions">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-outline-secondary" onclick="goBack()">
+              ← Back
+            </button>
+
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-primary" onclick="saveDraft()">
+                Save Draft
+              </button>
+
+              <button class="btn btn-success" onclick="openIssueModal()">
+                Issue Notice of Award
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ISSUE MODAL -->
+
+    <div class="modal fade" id="issueModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Issue Notice of Award?</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <p>
+              You are about to issue the Notice of Award to the approved
+              awardee.
+            </p>
+
+            <div class="alert alert-success">
+              <div class="mb-2">
+                <strong> Awardee: </strong>
+
+                ABC Office Supplies
+              </div>
+
+              <div class="mb-2">
+                <strong> Award Amount: </strong>
+
+                ₱36,500.00
+              </div>
+
+              <div>
+                <strong> NOA Reference: </strong>
+
+                NOA-2026-001
+              </div>
+            </div>
+
+            <div class="alert alert-warning mb-0">
+              <strong> Important: </strong>
+
+              Issuing the notice will change the procurement status to
+              <strong>NOA ISSUED</strong> and record the notice as officially
+              issued to the awardee.
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Cancel
+            </button>
+
+            <button class="btn btn-success" onclick="issueNOA()">
+              Yes, Issue Notice
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+
+    <div class="modal fade" id="successModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title">Notice of Award Issued</h5>
+
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="alert alert-success">
+              <strong> Notice of Award issued successfully. </strong>
+            </div>
+
+            <div class="mb-2">
+              <strong> Status: </strong>
+
+              <span class="badge bg-success"> NOA ISSUED </span>
+            </div>
+
+            <div class="mb-2">
+              <strong> NOA Reference: </strong>
+
+              NOA-2026-001
+            </div>
+
+            <div class="mb-2">
+              <strong> Awardee: </strong>
+
+              ABC Office Supplies
+            </div>
+
+            <div>
+              <strong> Award Amount: </strong>
+
+              ₱36,500.00
+            </div>
+
+            <hr />
+
+            <div class="text-muted small">
+              Next Step:
+              <strong>Purchase Order</strong>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-success" onclick="continueToPO()">
+              Continue to Purchase Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      function openIssueModal() {
+        const modal = new bootstrap.Modal(
+          document.getElementById("issueModal"),
+        );
+
+        modal.show();
+      }
+
+      function issueNOA() {
+        const modal = bootstrap.Modal.getInstance(
+          document.getElementById("issueModal"),
+        );
+
+        modal.hide();
+
+        setTimeout(function () {
+          const successModal = new bootstrap.Modal(
+            document.getElementById("successModal"),
+          );
+
+          successModal.show();
+        }, 300);
+      }
+
+      function saveDraft() {
+        alert("Notice of Award draft saved successfully.");
+      }
+
+      function previewNOA() {
+        alert("NOA document preview would open here.");
+      }
+
+      function generateNOA() {
+        alert("Notice of Award PDF generated successfully.");
+      }
+
+      function downloadNOA() {
+        alert("NOA PDF download would start here.");
+      }
+
+      function viewAbstract() {
+        window.location.href = "quotation-abstract.html";
+      }
+
+      function goBack() {
+        window.location.href = "approval-of-award.html";
+      }
+
+      function continueToPO() {
+        window.location.href = "purchase-order.html";
+      }
+    </script>
+  </body>
+</html>

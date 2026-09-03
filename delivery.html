@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery | Procurement System</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #f5f6f8;
+        color: #212529;
+      }
+
+      .page-header {
+        background: #fff;
+        border-bottom: 1px solid #dee2e6;
+        padding: 20px 0;
+      }
+
+      .section-card {
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .section-header {
+        padding: 16px 20px;
+        border-bottom: 1px solid #dee2e6;
+        font-weight: 600;
+      }
+
+      .section-body {
+        padding: 20px;
+      }
+
+      .label {
+        font-size: 13px;
+        color: #6c757d;
+        margin-bottom: 4px;
+      }
+
+      .value {
+        font-weight: 500;
+      }
+
+      .status-badge {
+        font-size: 12px;
+        padding: 6px 10px;
+        border-radius: 20px;
+      }
+
+      .summary-box {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        background: #fafafa;
+      }
+
+      .summary-number {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .table th {
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .table td {
+        vertical-align: middle;
+      }
+
+      .readonly {
+        background-color: #f8f9fa !important;
+      }
+
+      .sticky-actions {
+        position: sticky;
+        bottom: 0;
+        z-index: 100;
+        background: #fff;
+        border-top: 1px solid #dee2e6;
+        padding: 15px 0;
+        margin-top: 20px;
+      }
+
+      .history-item {
+        border-left: 3px solid #6c757d;
+        padding-left: 15px;
+        margin-bottom: 20px;
+      }
+
+      .history-date {
+        font-size: 12px;
+        color: #6c757d;
+      }
+
+      .document-row {
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
+        padding: 12px 15px;
+        margin-bottom: 10px;
+      }
+
+      .required {
+        color: #dc3545;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container-fluid px-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <h4 class="mb-0">Delivery</h4>
+
+              <span class="badge bg-primary status-badge"> PO ISSUED </span>
+
+              <span class="badge bg-warning text-dark status-badge">
+                DELIVERY PENDING
+              </span>
+            </div>
+
+            <div class="text-muted small">
+              Record and monitor actual delivery against the issued Purchase
+              Order.
+            </div>
+          </div>
+
+          <div class="text-end">
+            <div class="small text-muted">PO Number</div>
+            <div class="fw-semibold">PO-2026-001</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid px-4 py-4">
+      <!-- PROCUREMENT INFORMATION -->
+      <div class="section-card">
+        <div class="section-header">Procurement Information</div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="label">Purchase Request No.</div>
+              <div class="value">2026-08-0113</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">NNP Reference</div>
+              <div class="value">NNP-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">Award Reference</div>
+              <div class="value">AW-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">NOA Reference</div>
+              <div class="value">NOA-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">Purchase Order</div>
+              <div class="value">PO-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">PO Date</div>
+              <div class="value">September 03, 2026</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">PO Amount</div>
+              <div class="value">₱36,500.00</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">Delivery Period</div>
+              <div class="value">30 Calendar Days</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUPPLIER INFORMATION -->
+      <div class="section-card">
+        <div class="section-header">Supplier Information</div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="label">Supplier</div>
+              <div class="value">ABC Office Supplies</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="label">Contact Person</div>
+              <div class="value">Juan Dela Cruz</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="label">Contact Number</div>
+              <div class="value">0917 123 4567</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="label">Supplier Address</div>
+              <div class="value">Lingayen, Pangasinan</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="label">Delivery Location</div>
+              <div class="value">Main Office</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DELIVERY INFORMATION -->
+      <div class="section-card">
+        <div class="section-header">Delivery Information</div>
+
+        <div class="section-body">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label"> Delivery Reference </label>
+
+              <input
+                type="text"
+                class="form-control"
+                id="deliveryReference"
+                placeholder="e.g. DEL-2026-001"
+                value="DEL-2026-001"
+              />
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">
+                Delivery Date <span class="required">*</span>
+              </label>
+
+              <input
+                type="date"
+                class="form-control"
+                id="deliveryDate"
+                value="2026-09-10"
+              />
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">
+                Delivery Receipt / DR No. <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                class="form-control"
+                id="drNumber"
+                placeholder="Enter DR number"
+                value="DR-2026-045"
+              />
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">
+                Delivery Status <span class="required">*</span>
+              </label>
+
+              <select
+                class="form-select"
+                id="deliveryStatus"
+                onchange="updateDeliverySummary()"
+              >
+                <option value="PARTIAL">Partial Delivery</option>
+                <option value="COMPLETE" selected>Complete Delivery</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">
+                Received By <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                class="form-control"
+                id="receivedBy"
+                placeholder="Name of receiving personnel"
+                value="Maria Santos"
+              />
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label"> Receiving Office </label>
+
+              <input
+                type="text"
+                class="form-control"
+                value="Management Information Services Office"
+              />
+            </div>
+
+            <div class="col-12">
+              <label class="form-label"> Delivery Remarks </label>
+
+              <textarea
+                class="form-control"
+                rows="3"
+                id="deliveryRemarks"
+                placeholder="Enter delivery remarks..."
+              >
+Complete delivery received in good condition.</textarea
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DELIVERED ITEMS -->
+      <div class="section-card">
+        <div
+          class="section-header d-flex justify-content-between align-items-center"
+        >
+          <span> Delivered Items </span>
+
+          <span class="small text-muted"> Actual quantities received </span>
+        </div>
+
+        <div class="section-body p-0">
+          <div class="table-responsive">
+            <table class="table table-bordered mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th style="width: 25%">Item / Description</th>
+                  <th>Unit</th>
+                  <th>PO Qty.</th>
+                  <th style="width: 150px">Delivered Qty.</th>
+                  <th>Remaining</th>
+                  <th style="width: 170px">Condition</th>
+                  <th>Remarks</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="fw-semibold">Procurement System</div>
+
+                    <div class="small text-muted">
+                      Procurement system development
+                    </div>
+                  </td>
+
+                  <td>Lot</td>
+
+                  <td>1</td>
+
+                  <td>
+                    <input
+                      type="number"
+                      min="0"
+                      max="1"
+                      step="1"
+                      class="form-control delivered-qty"
+                      id="deliveredQty"
+                      value="1"
+                      onchange="updateDeliverySummary()"
+                    />
+                  </td>
+
+                  <td>
+                    <span class="badge bg-success" id="remainingQty"> 0 </span>
+                  </td>
+
+                  <td>
+                    <select class="form-select">
+                      <option selected>Good</option>
+
+                      <option>Good with Minor Issues</option>
+
+                      <option>Damaged</option>
+
+                      <option>Incomplete</option>
+                    </select>
+                  </td>
+
+                  <td>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Remarks"
+                      value="Complete and functional."
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- DELIVERY SUMMARY -->
+      <div class="section-card">
+        <div class="section-header">Delivery Summary</div>
+
+        <div class="section-body">
+          <div class="row g-3">
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="label">Total PO Quantity</div>
+
+                <div class="summary-number" id="poQtySummary">1</div>
+
+                <div class="small text-muted">Lot</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="label">Delivered Quantity</div>
+
+                <div
+                  class="summary-number text-success"
+                  id="deliveredQtySummary"
+                >
+                  1
+                </div>
+
+                <div class="small text-muted">Lot</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="label">Remaining Quantity</div>
+
+                <div class="summary-number" id="remainingQtySummary">0</div>
+
+                <div class="small text-muted">Lot</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="label">Delivery Status</div>
+
+                <div class="mt-2">
+                  <span id="summaryStatus" class="badge bg-success">
+                    COMPLETE
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DELIVERY DOCUMENTS -->
+      <div class="section-card">
+        <div class="section-header">Delivery Documents</div>
+
+        <div class="section-body">
+          <div class="document-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="fw-semibold">Delivery Receipt</div>
+
+                <div class="small text-muted">DR-2026-045.pdf</div>
+              </div>
+
+              <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-outline-secondary">View</button>
+
+                <button class="btn btn-sm btn-outline-primary">Download</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label"> Upload Delivery Document </label>
+
+            <input
+              type="file"
+              class="form-control"
+              accept=".pdf,.jpg,.jpeg,.png"
+            />
+
+            <div class="form-text">Accepted formats: PDF, JPG, JPEG, PNG.</div>
+          </div>
+
+          <div>
+            <label class="form-label"> Additional Supporting Documents </label>
+
+            <input
+              type="file"
+              class="form-control"
+              multiple
+              accept=".pdf,.jpg,.jpeg,.png"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- DELIVERY HISTORY -->
+      <div class="section-card">
+        <div class="section-header">Delivery History</div>
+
+        <div class="section-body">
+          <div class="history-item">
+            <div class="d-flex justify-content-between">
+              <div class="fw-semibold">Delivery Recorded</div>
+
+              <div class="history-date">September 10, 2026</div>
+            </div>
+
+            <div class="small mt-1">DR No. <strong>DR-2026-045</strong></div>
+
+            <div class="small text-muted mt-1">
+              1 Lot delivered and received by Maria Santos.
+            </div>
+
+            <span class="badge bg-success mt-2"> COMPLETE </span>
+          </div>
+
+          <div class="history-item">
+            <div class="d-flex justify-content-between">
+              <div class="fw-semibold">Purchase Order Issued</div>
+
+              <div class="history-date">September 03, 2026</div>
+            </div>
+
+            <div class="small text-muted mt-1">
+              PO-2026-001 issued to ABC Office Supplies.
+            </div>
+
+            <span class="badge bg-primary mt-2"> PO ISSUED </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STICKY ACTIONS -->
+      <div class="sticky-actions">
+        <div class="container-fluid px-0">
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-outline-secondary" onclick="goBack()">
+              ← Back
+            </button>
+
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-primary" onclick="saveDraft()">
+                Save Draft
+              </button>
+
+              <button
+                class="btn btn-primary"
+                onclick="showRecordDeliveryModal()"
+              >
+                Record Delivery
+              </button>
+
+              <button
+                class="btn btn-success"
+                id="inspectionButton"
+                onclick="proceedToInspection()"
+              >
+                Proceed to Inspection & Acceptance →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECORD DELIVERY MODAL -->
+    <div
+      class="modal fade"
+      id="recordDeliveryModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Record Delivery?</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <p>
+              You are about to record the actual delivery against the issued
+              Purchase Order.
+            </p>
+
+            <div class="alert alert-light border">
+              <div class="row g-2">
+                <div class="col-6">
+                  <small class="text-muted"> PO Number </small>
+
+                  <div class="fw-semibold">PO-2026-001</div>
+                </div>
+
+                <div class="col-6">
+                  <small class="text-muted"> DR No. </small>
+
+                  <div class="fw-semibold">DR-2026-045</div>
+                </div>
+
+                <div class="col-6">
+                  <small class="text-muted"> Supplier </small>
+
+                  <div class="fw-semibold">ABC Office Supplies</div>
+                </div>
+
+                <div class="col-6">
+                  <small class="text-muted"> Delivered </small>
+
+                  <div class="fw-semibold text-success">
+                    <span id="modalDeliveredQty"> 1 </span>
+                    Lot
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alert alert-warning small mb-0">
+              Please verify the actual delivered quantity, delivery receipt, and
+              condition of the items before recording the delivery.
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+              Cancel
+            </button>
+
+            <button class="btn btn-primary" onclick="recordDelivery()">
+              Confirm Delivery
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Delivery Recorded Successfully</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="text-center py-3">
+              <div
+                class="rounded-circle bg-success text-white d-inline-flex align-items-center justify-content-center mb-3"
+                style="width: 60px; height: 60px; font-size: 28px"
+              >
+                ✓
+              </div>
+
+              <h5>Delivery Successfully Recorded</h5>
+
+              <p class="text-muted mb-3">
+                The delivery has been recorded against Purchase Order
+                <strong>PO-2026-001</strong>.
+              </p>
+
+              <div class="alert alert-success">
+                <div class="small text-muted">Delivery Status</div>
+
+                <div class="fw-semibold">DELIVERED</div>
+
+                <hr />
+
+                <div class="small text-muted">Next Step</div>
+
+                <div class="fw-semibold">Inspection & Acceptance</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-success" onclick="goToInspection()">
+              Continue to Inspection & Acceptance
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAVED MODAL -->
+    <div class="modal fade" id="savedModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Delivery Draft Saved</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <p class="mb-0">
+              The delivery record has been saved as a draft. You can continue
+              editing it later.
+            </p>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const PO_QUANTITY = 1;
+
+      function updateDeliverySummary() {
+        let delivered =
+          parseFloat(document.getElementById("deliveredQty").value) || 0;
+
+        if (delivered < 0) {
+          delivered = 0;
+        }
+
+        if (delivered > PO_QUANTITY) {
+          delivered = PO_QUANTITY;
+          document.getElementById("deliveredQty").value = PO_QUANTITY;
+        }
+
+        const remaining = PO_QUANTITY - delivered;
+
+        document.getElementById("remainingQty").textContent = remaining;
+
+        document.getElementById("deliveredQtySummary").textContent = delivered;
+
+        document.getElementById("remainingQtySummary").textContent = remaining;
+
+        const statusSelect = document.getElementById("deliveryStatus");
+
+        const summaryStatus = document.getElementById("summaryStatus");
+
+        const inspectionButton = document.getElementById("inspectionButton");
+
+        if (remaining === 0 && delivered > 0) {
+          statusSelect.value = "COMPLETE";
+
+          summaryStatus.textContent = "COMPLETE";
+          summaryStatus.className = "badge bg-success";
+
+          inspectionButton.disabled = false;
+        } else if (delivered > 0) {
+          statusSelect.value = "PARTIAL";
+
+          summaryStatus.textContent = "PARTIAL";
+          summaryStatus.className = "badge bg-warning text-dark";
+
+          inspectionButton.disabled = true;
+        } else {
+          summaryStatus.textContent = "PENDING";
+          summaryStatus.className = "badge bg-secondary";
+
+          inspectionButton.disabled = true;
+        }
+
+        document.getElementById("modalDeliveredQty").textContent = delivered;
+      }
+
+      function showRecordDeliveryModal() {
+        const deliveryDate = document.getElementById("deliveryDate").value;
+
+        const drNumber = document.getElementById("drNumber").value;
+
+        const receivedBy = document.getElementById("receivedBy").value;
+
+        if (!deliveryDate || !drNumber || !receivedBy) {
+          alert(
+            "Please complete the required delivery information before recording the delivery.",
+          );
+
+          return;
+        }
+
+        updateDeliverySummary();
+
+        const modal = new bootstrap.Modal(
+          document.getElementById("recordDeliveryModal"),
+        );
+
+        modal.show();
+      }
+
+      function recordDelivery() {
+        const modalElement = document.getElementById("recordDeliveryModal");
+
+        const modal = bootstrap.Modal.getInstance(modalElement);
+
+        modal.hide();
+
+        setTimeout(function () {
+          const successModal = new bootstrap.Modal(
+            document.getElementById("successModal"),
+          );
+
+          successModal.show();
+        }, 400);
+      }
+
+      function saveDraft() {
+        const modal = new bootstrap.Modal(
+          document.getElementById("savedModal"),
+        );
+
+        modal.show();
+      }
+
+      function proceedToInspection() {
+        const delivered =
+          parseFloat(document.getElementById("deliveredQty").value) || 0;
+
+        if (delivered < PO_QUANTITY) {
+          alert(
+            "The full delivery must be recorded before proceeding to Inspection & Acceptance.",
+          );
+
+          return;
+        }
+
+        goToInspection();
+      }
+
+      function goToInspection() {
+        /*
+         * Laravel:
+         * window.location.href =
+         * '/procurement/delivery/' + deliveryId + '/inspection';
+         */
+
+        window.location.href = "inspection-acceptance.html";
+      }
+
+      function goBack() {
+        /*
+         * Laravel:
+         * window.location.href = '/purchase-orders';
+         */
+
+        window.location.href = "purchase-order.html";
+      }
+
+      updateDeliverySummary();
+    </script>
+  </body>
+</html>

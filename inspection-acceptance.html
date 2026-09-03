@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Inspection & Acceptance | Procurement System</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #f5f6f8;
+        color: #212529;
+      }
+
+      .page-header {
+        background: #fff;
+        border-bottom: 1px solid #dee2e6;
+        padding: 20px 0;
+      }
+
+      .section-card {
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .section-header {
+        padding: 16px 20px;
+        border-bottom: 1px solid #dee2e6;
+        font-weight: 600;
+      }
+
+      .section-body {
+        padding: 20px;
+      }
+
+      .label {
+        font-size: 13px;
+        color: #6c757d;
+        margin-bottom: 4px;
+      }
+
+      .value {
+        font-weight: 500;
+      }
+
+      .status-badge {
+        font-size: 12px;
+        padding: 6px 10px;
+        border-radius: 20px;
+      }
+
+      .readonly {
+        background-color: #f8f9fa !important;
+      }
+
+      .summary-box {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        background: #fafafa;
+      }
+
+      .summary-number {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .table th {
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .table td {
+        vertical-align: middle;
+      }
+
+      .sticky-actions {
+        position: sticky;
+        bottom: 0;
+        z-index: 100;
+        background: #fff;
+        border-top: 1px solid #dee2e6;
+        padding: 15px 0;
+        margin-top: 20px;
+      }
+
+      .history-item {
+        border-left: 3px solid #6c757d;
+        padding-left: 15px;
+        margin-bottom: 20px;
+      }
+
+      .history-date {
+        font-size: 12px;
+        color: #6c757d;
+      }
+
+      .document-row {
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
+        padding: 12px 15px;
+        margin-bottom: 10px;
+      }
+
+      .required {
+        color: #dc3545;
+      }
+
+      .inspection-result {
+        font-weight: 600;
+      }
+
+      .check-item {
+        padding: 12px;
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container-fluid px-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <h4 class="mb-0">Inspection & Acceptance</h4>
+
+              <span class="badge bg-success status-badge"> DELIVERED </span>
+
+              <span class="badge bg-warning text-dark status-badge">
+                FOR INSPECTION
+              </span>
+            </div>
+
+            <div class="text-muted small">
+              Inspect delivered items and record the acceptance result.
+            </div>
+          </div>
+
+          <div class="text-end">
+            <div class="small text-muted">PO Number</div>
+
+            <div class="fw-semibold">PO-2026-001</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid px-4 py-4">
+      <!-- PROCUREMENT INFORMATION -->
+      <div class="section-card">
+        <div class="section-header">Procurement Information</div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="label">Purchase Request No.</div>
+
+              <div class="value">2026-08-0113</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">NNP Reference</div>
+
+              <div class="value">NNP-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">Award Reference</div>
+
+              <div class="value">AW-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">NOA Reference</div>
+
+              <div class="value">NOA-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">Purchase Order</div>
+
+              <div class="value">PO-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">PO Date</div>
+
+              <div class="value">September 03, 2026</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">PO Amount</div>
+
+              <div class="value">₱36,500.00</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">Delivery Location</div>
+
+              <div class="value">Main Office</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DELIVERY INFORMATION -->
+      <div class="section-card">
+        <div class="section-header">Delivery Information</div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="label">Delivery Reference</div>
+
+              <div class="value">DEL-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">Delivery Date</div>
+
+              <div class="value">September 10, 2026</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">Delivery Receipt / DR No.</div>
+
+              <div class="value">DR-2026-045</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="label">Received By</div>
+
+              <div class="value">Maria Santos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUPPLIER INFORMATION -->
+      <div class="section-card">
+        <div class="section-header">Supplier Information</div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="label">Supplier</div>
+
+              <div class="value">ABC Office Supplies</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="label">Contact Person</div>
+
+              <div class="value">Juan Dela Cruz</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="label">Contact Number</div>
+
+              <div class="value">0917 123 4567</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="label">Supplier Address</div>
+
+              <div class="value">Lingayen, Pangasinan</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="label">Delivery Location</div>
+
+              <div class="value">Main Office</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INSPECTION DETAILS -->
+      <div class="section-card">
+        <div class="section-header">Inspection Details</div>
+
+        <div class="section-body">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label">
+                Inspection Date
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="date"
+                class="form-control"
+                id="inspectionDate"
+                value="2026-09-11"
+              />
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">
+                Inspected By
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                class="form-control"
+                id="inspectedBy"
+                value="Inspection Committee"
+              />
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label"> Inspection Reference </label>
+
+              <input
+                type="text"
+                class="form-control"
+                id="inspectionReference"
+                value="IAR-2026-001"
+              />
+            </div>
+
+            <div class="col-12">
+              <label class="form-label"> General Inspection Findings </label>
+
+              <textarea class="form-control" rows="3" id="inspectionFindings">
+Delivered item was inspected against the approved procurement requirements and found complete and in good condition.</textarea
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INSPECTION CHECKLIST -->
+      <div class="section-card">
+        <div class="section-header">Inspection Checklist</div>
+
+        <div class="section-body">
+          <div class="check-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="fw-semibold">Quantity</div>
+
+                <div class="small text-muted">
+                  Delivered quantity matches the Purchase Order.
+                </div>
+              </div>
+
+              <div>
+                <select class="form-select">
+                  <option selected>Passed</option>
+                  <option>Failed</option>
+                  <option>With Findings</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="fw-semibold">Specifications / Requirements</div>
+
+                <div class="small text-muted">
+                  Delivered item meets the approved specifications and
+                  requirements.
+                </div>
+              </div>
+
+              <div>
+                <select class="form-select">
+                  <option selected>Passed</option>
+                  <option>Failed</option>
+                  <option>With Findings</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="fw-semibold">Condition</div>
+
+                <div class="small text-muted">
+                  Delivered item is in acceptable physical and functional
+                  condition.
+                </div>
+              </div>
+
+              <div>
+                <select class="form-select">
+                  <option selected>Passed</option>
+                  <option>Failed</option>
+                  <option>With Findings</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="check-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="fw-semibold">Completeness</div>
+
+                <div class="small text-muted">
+                  Required components, documents, and deliverables are complete.
+                </div>
+              </div>
+
+              <div>
+                <select class="form-select">
+                  <option selected>Passed</option>
+                  <option>Failed</option>
+                  <option>With Findings</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEMS FOR INSPECTION -->
+      <div class="section-card">
+        <div class="section-header">Items for Inspection</div>
+
+        <div class="section-body p-0">
+          <div class="table-responsive">
+            <table class="table table-bordered mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>Item / Description</th>
+                  <th>Unit</th>
+                  <th>PO Qty.</th>
+                  <th>Delivered</th>
+                  <th>Inspected</th>
+                  <th>Accepted</th>
+                  <th>Rejected</th>
+                  <th>Inspection Result</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="fw-semibold">Procurement System</div>
+
+                    <div class="small text-muted">
+                      Procurement system development
+                    </div>
+                  </td>
+
+                  <td>Lot</td>
+
+                  <td>1</td>
+
+                  <td>1</td>
+
+                  <td>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="inspectedQty"
+                      value="1"
+                      min="0"
+                      max="1"
+                      onchange="updateInspectionSummary()"
+                    />
+                  </td>
+
+                  <td>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="acceptedQty"
+                      value="1"
+                      min="0"
+                      max="1"
+                      onchange="updateInspectionSummary()"
+                    />
+                  </td>
+
+                  <td>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="rejectedQty"
+                      value="0"
+                      min="0"
+                      max="1"
+                      readonly
+                    />
+                  </td>
+
+                  <td>
+                    <span id="itemInspectionResult" class="badge bg-success">
+                      ACCEPTED
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACCEPTANCE DETAILS -->
+      <div class="section-card">
+        <div class="section-header">Acceptance Details</div>
+
+        <div class="section-body">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label">
+                Acceptance Result
+                <span class="required">*</span>
+              </label>
+
+              <select
+                class="form-select"
+                id="acceptanceResult"
+                onchange="updateAcceptanceStatus()"
+              >
+                <option value="ACCEPTED" selected>Accepted</option>
+
+                <option value="ACCEPTED_WITH_FINDINGS">
+                  Accepted with Findings
+                </option>
+
+                <option value="REJECTED">Rejected</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">
+                Acceptance Date
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="date"
+                class="form-control"
+                id="acceptanceDate"
+                value="2026-09-11"
+              />
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">
+                Accepted By
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                class="form-control"
+                id="acceptedBy"
+                value="Inspection Committee"
+              />
+            </div>
+
+            <div class="col-12">
+              <label class="form-label"> Acceptance Remarks </label>
+
+              <textarea class="form-control" rows="3" id="acceptanceRemarks">
+The delivered item complies with the approved requirements and is accepted.</textarea
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INSPECTION SUMMARY -->
+      <div class="section-card">
+        <div class="section-header">Inspection & Acceptance Summary</div>
+
+        <div class="section-body">
+          <div class="row g-3">
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="label">Delivered</div>
+
+                <div class="summary-number" id="summaryDelivered">1</div>
+
+                <div class="small text-muted">Lot</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="label">Inspected</div>
+
+                <div class="summary-number" id="summaryInspected">1</div>
+
+                <div class="small text-muted">Lot</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="label">Accepted</div>
+
+                <div class="summary-number text-success" id="summaryAccepted">
+                  1
+                </div>
+
+                <div class="small text-muted">Lot</div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="label">Rejected</div>
+
+                <div class="summary-number text-danger" id="summaryRejected">
+                  0
+                </div>
+
+                <div class="small text-muted">Lot</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-3">
+            <div class="d-flex justify-content-between mb-2">
+              <span class="small text-muted"> Acceptance Status </span>
+
+              <span id="summaryAcceptanceStatus" class="badge bg-success">
+                ACCEPTED
+              </span>
+            </div>
+
+            <div class="progress" style="height: 8px">
+              <div
+                id="acceptanceProgress"
+                class="progress-bar bg-success"
+                style="width: 100%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DOCUMENTS -->
+      <div class="section-card">
+        <div class="section-header">Inspection & Acceptance Documents</div>
+
+        <div class="section-body">
+          <div class="document-row">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="fw-semibold">Delivery Receipt</div>
+
+                <div class="small text-muted">DR-2026-045.pdf</div>
+              </div>
+
+              <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-outline-secondary">View</button>
+
+                <button class="btn btn-sm btn-outline-primary">Download</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label"> Upload Inspection Report </label>
+
+            <input
+              type="file"
+              class="form-control"
+              accept=".pdf,.jpg,.jpeg,.png"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label"> Upload Acceptance Document </label>
+
+            <input
+              type="file"
+              class="form-control"
+              accept=".pdf,.jpg,.jpeg,.png"
+            />
+          </div>
+
+          <div>
+            <label class="form-label"> Other Supporting Documents </label>
+
+            <input
+              type="file"
+              class="form-control"
+              multiple
+              accept=".pdf,.jpg,.jpeg,.png"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- HISTORY -->
+      <div class="section-card">
+        <div class="section-header">Inspection & Acceptance History</div>
+
+        <div class="section-body">
+          <div class="history-item">
+            <div class="d-flex justify-content-between">
+              <div class="fw-semibold">Delivery Recorded</div>
+
+              <div class="history-date">September 10, 2026</div>
+            </div>
+
+            <div class="small text-muted mt-1">
+              DR-2026-045 — 1 Lot delivered in good condition.
+            </div>
+
+            <span class="badge bg-success mt-2"> DELIVERED </span>
+          </div>
+
+          <div class="history-item">
+            <div class="d-flex justify-content-between">
+              <div class="fw-semibold">Purchase Order Issued</div>
+
+              <div class="history-date">September 03, 2026</div>
+            </div>
+
+            <div class="small text-muted mt-1">
+              PO-2026-001 issued to ABC Office Supplies.
+            </div>
+
+            <span class="badge bg-primary mt-2"> PO ISSUED </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STICKY ACTIONS -->
+      <div class="sticky-actions">
+        <div class="container-fluid px-0">
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-outline-secondary" onclick="goBack()">
+              ← Back
+            </button>
+
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-primary" onclick="saveDraft()">
+                Save Draft
+              </button>
+
+              <button
+                class="btn btn-primary"
+                onclick="showCompleteInspectionModal()"
+              >
+                Complete Inspection
+              </button>
+
+              <button
+                class="btn btn-success"
+                id="paymentButton"
+                onclick="proceedToPayment()"
+              >
+                Proceed to Payment →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPLETE INSPECTION MODAL -->
+    <div
+      class="modal fade"
+      id="completeInspectionModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Complete Inspection & Acceptance?</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <p>
+              You are about to complete the inspection and record the acceptance
+              result for this delivery.
+            </p>
+
+            <div class="alert alert-light border">
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="small text-muted">PO Number</div>
+
+                  <div class="fw-semibold">PO-2026-001</div>
+                </div>
+
+                <div class="col-6">
+                  <div class="small text-muted">Delivery</div>
+
+                  <div class="fw-semibold">DEL-2026-001</div>
+                </div>
+
+                <div class="col-6">
+                  <div class="small text-muted">Accepted</div>
+
+                  <div class="fw-semibold text-success" id="modalAccepted">
+                    1 Lot
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="small text-muted">Rejected</div>
+
+                  <div class="fw-semibold text-danger" id="modalRejected">
+                    0 Lot
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="small text-muted">Acceptance Result</div>
+
+                  <div class="fw-semibold" id="modalResult">ACCEPTED</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alert alert-warning small mb-0">
+              Please verify the inspection findings, quantities, acceptance
+              result, and supporting documents before completing this record.
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+              Cancel
+            </button>
+
+            <button class="btn btn-primary" onclick="completeInspection()">
+              Confirm & Complete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Inspection Completed Successfully</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="text-center py-3">
+              <div
+                class="rounded-circle bg-success text-white d-inline-flex align-items-center justify-content-center mb-3"
+                style="width: 60px; height: 60px; font-size: 28px"
+              >
+                ✓
+              </div>
+
+              <h5>Inspection & Acceptance Completed</h5>
+
+              <p class="text-muted">
+                The delivery has been inspected and the acceptance result has
+                been recorded.
+              </p>
+
+              <div class="alert alert-success">
+                <div class="small text-muted">Status</div>
+
+                <div class="fw-semibold" id="successStatus">ACCEPTED</div>
+
+                <hr />
+
+                <div class="small text-muted">Next Step</div>
+
+                <div class="fw-semibold">Payment</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-success" onclick="goToPayment()">
+              Continue to Payment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAVED MODAL -->
+    <div class="modal fade" id="savedModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Inspection Draft Saved</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <p class="mb-0">
+              The Inspection & Acceptance record has been saved as a draft.
+            </p>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const DELIVERED_QTY = 1;
+
+      function updateInspectionSummary() {
+        let inspected =
+          parseFloat(document.getElementById("inspectedQty").value) || 0;
+
+        let accepted =
+          parseFloat(document.getElementById("acceptedQty").value) || 0;
+
+        if (inspected < 0) {
+          inspected = 0;
+        }
+
+        if (inspected > DELIVERED_QTY) {
+          inspected = DELIVERED_QTY;
+          document.getElementById("inspectedQty").value = DELIVERED_QTY;
+        }
+
+        if (accepted < 0) {
+          accepted = 0;
+        }
+
+        if (accepted > inspected) {
+          accepted = inspected;
+
+          document.getElementById("acceptedQty").value = accepted;
+        }
+
+        const rejected = inspected - accepted;
+
+        document.getElementById("rejectedQty").value = rejected;
+
+        document.getElementById("summaryInspected").textContent = inspected;
+
+        document.getElementById("summaryAccepted").textContent = accepted;
+
+        document.getElementById("summaryRejected").textContent = rejected;
+
+        const itemResult = document.getElementById("itemInspectionResult");
+
+        if (rejected > 0) {
+          itemResult.textContent = "WITH FINDINGS";
+
+          itemResult.className = "badge bg-warning text-dark";
+        } else if (accepted === inspected && inspected > 0) {
+          itemResult.textContent = "ACCEPTED";
+
+          itemResult.className = "badge bg-success";
+        } else {
+          itemResult.textContent = "PENDING";
+
+          itemResult.className = "badge bg-secondary";
+        }
+
+        updateAcceptanceStatus();
+      }
+
+      function updateAcceptanceStatus() {
+        const result = document.getElementById("acceptanceResult").value;
+
+        const status = document.getElementById("summaryAcceptanceStatus");
+
+        const progress = document.getElementById("acceptanceProgress");
+
+        const paymentButton = document.getElementById("paymentButton");
+
+        if (result === "ACCEPTED") {
+          status.textContent = "ACCEPTED";
+
+          status.className = "badge bg-success";
+
+          progress.className = "progress-bar bg-success";
+
+          progress.style.width = "100%";
+
+          paymentButton.disabled = false;
+        } else if (result === "ACCEPTED_WITH_FINDINGS") {
+          status.textContent = "ACCEPTED WITH FINDINGS";
+
+          status.className = "badge bg-warning text-dark";
+
+          progress.className = "progress-bar bg-warning";
+
+          progress.style.width = "100%";
+
+          paymentButton.disabled = false;
+        } else {
+          status.textContent = "REJECTED";
+
+          status.className = "badge bg-danger";
+
+          progress.className = "progress-bar bg-danger";
+
+          progress.style.width = "100%";
+
+          paymentButton.disabled = true;
+        }
+
+        document.getElementById("modalResult").textContent = status.textContent;
+
+        document.getElementById("modalAccepted").textContent =
+          document.getElementById("summaryAccepted").textContent + " Lot";
+
+        document.getElementById("modalRejected").textContent =
+          document.getElementById("summaryRejected").textContent + " Lot";
+      }
+
+      function showCompleteInspectionModal() {
+        const inspectionDate = document.getElementById("inspectionDate").value;
+
+        const inspectedBy = document.getElementById("inspectedBy").value;
+
+        const acceptedBy = document.getElementById("acceptedBy").value;
+
+        if (!inspectionDate || !inspectedBy || !acceptedBy) {
+          alert(
+            "Please complete all required inspection and acceptance information.",
+          );
+
+          return;
+        }
+
+        updateInspectionSummary();
+
+        const modal = new bootstrap.Modal(
+          document.getElementById("completeInspectionModal"),
+        );
+
+        modal.show();
+      }
+
+      function completeInspection() {
+        const modalElement = document.getElementById("completeInspectionModal");
+
+        const modal = bootstrap.Modal.getInstance(modalElement);
+
+        modal.hide();
+
+        setTimeout(function () {
+          const result = document.getElementById("acceptanceResult").value;
+
+          let statusText = "ACCEPTED";
+
+          if (result === "ACCEPTED_WITH_FINDINGS") {
+            statusText = "ACCEPTED WITH FINDINGS";
+          } else if (result === "REJECTED") {
+            statusText = "REJECTED";
+          }
+
+          document.getElementById("successStatus").textContent = statusText;
+
+          const successModal = new bootstrap.Modal(
+            document.getElementById("successModal"),
+          );
+
+          successModal.show();
+        }, 400);
+      }
+
+      function saveDraft() {
+        const modal = new bootstrap.Modal(
+          document.getElementById("savedModal"),
+        );
+
+        modal.show();
+      }
+
+      function proceedToPayment() {
+        const result = document.getElementById("acceptanceResult").value;
+
+        if (result === "REJECTED") {
+          alert(
+            "Payment cannot proceed while the inspection result is REJECTED.",
+          );
+
+          return;
+        }
+
+        goToPayment();
+      }
+
+      function goToPayment() {
+        /*
+         * Laravel:
+         *
+         * window.location.href =
+         * '/procurement/inspection-acceptance/'
+         * + inspectionAcceptanceId
+         * + '/payment';
+         */
+
+        window.location.href = "payment.html";
+      }
+
+      function goBack() {
+        /*
+         * Laravel:
+         *
+         * window.location.href =
+         * '/procurement/delivery/' + deliveryId;
+         */
+
+        window.location.href = "delivery.html";
+      }
+
+      updateInspectionSummary();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recommendation for Award</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: #f5f6f8;
+      }
+
+      .page-header {
+        background: #fff;
+        border-bottom: 1px solid #dee2e6;
+        padding: 20px 0;
+      }
+
+      .section-card {
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .section-header {
+        padding: 15px 20px;
+        border-bottom: 1px solid #dee2e6;
+        font-weight: 600;
+      }
+
+      .section-body {
+        padding: 20px;
+      }
+
+      .info-label {
+        font-size: 13px;
+        color: #6c757d;
+        margin-bottom: 3px;
+      }
+
+      .info-value {
+        font-weight: 500;
+      }
+
+      .recommended-box {
+        border: 2px solid #198754;
+        border-radius: 8px;
+        background: #f0fff7;
+        padding: 20px;
+      }
+
+      .amount {
+        font-size: 28px;
+        font-weight: 700;
+        color: #198754;
+      }
+
+      .sticky-actions {
+        position: sticky;
+        bottom: 0;
+        background: #fff;
+        border-top: 1px solid #dee2e6;
+        padding: 15px 0;
+        margin-top: 30px;
+        z-index: 100;
+      }
+
+      .document-row {
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
+        padding: 12px 15px;
+        margin-bottom: 10px;
+      }
+
+      .timeline {
+        border-left: 2px solid #dee2e6;
+        padding-left: 20px;
+      }
+
+      .timeline-item {
+        margin-bottom: 18px;
+      }
+
+      .timeline-title {
+        font-weight: 600;
+      }
+
+      .timeline-date {
+        font-size: 13px;
+        color: #6c757d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <h4 class="mb-1">Recommendation for Award</h4>
+
+            <div class="text-muted">
+              NNP-2026-001
+              <span class="mx-2">•</span>
+              PR-2026-08-0113
+            </div>
+          </div>
+
+          <div>
+            <span class="badge bg-warning text-dark"> FOR APPROVAL </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <!-- PROCUREMENT INFORMATION -->
+      <div class="section-card">
+        <div class="section-header">Procurement Information</div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="info-label">PR Number</div>
+              <div class="info-value">2026-08-0113</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">NNP Reference</div>
+              <div class="info-value">NNP-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Procurement Mode</div>
+              <div class="info-value">Negotiated Procurement - Shopping</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">ABC</div>
+              <div class="info-value">₱40,000.00</div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="info-label">Project / Procurement Title</div>
+              <div class="info-value">Procurement System</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Abstract Reference</div>
+              <div class="info-value">AB-2026-001</div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="info-label">Abstract Date</div>
+              <div class="info-value">September 02, 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECOMMENDED AWARD -->
+      <div class="section-card">
+        <div class="section-header">Recommended Award</div>
+
+        <div class="section-body">
+          <div class="recommended-box">
+            <div class="row align-items-center">
+              <div class="col-md-7">
+                <div class="text-muted small mb-1">RECOMMENDED SUPPLIER</div>
+
+                <h4 class="mb-1">ABC Office Supplies</h4>
+
+                <div class="text-muted">Lowest Responsive Quotation</div>
+              </div>
+
+              <div class="col-md-5 text-md-end mt-3 mt-md-0">
+                <div class="text-muted small">RECOMMENDED AWARD AMOUNT</div>
+
+                <div class="amount">₱36,500.00</div>
+
+                <div class="text-success small">₱3,500.00 below ABC</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AWARD BASIS -->
+      <div class="section-card">
+        <div class="section-header">Basis of Recommendation</div>
+
+        <div class="section-body">
+          <div class="mb-3">
+            <label class="form-label"> Recommendation Basis </label>
+
+            <select class="form-select" id="recommendationBasis">
+              <option selected>Lowest Responsive Quotation</option>
+
+              <option>Single Responsive Quotation</option>
+
+              <option>Other Justified Basis</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="form-label"> Recommendation Remarks </label>
+
+            <textarea class="form-control" id="recommendationRemarks" rows="5">
+Based on the evaluation and quotation abstract, ABC Office Supplies submitted the lowest responsive quotation in the amount of ₱36,500.00, which is within the Approved Budget for the Contract of ₱40,000.00. The supplier was found responsive to the applicable quotation and procurement requirements.</textarea
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- SUPPLIER DETAILS -->
+      <div class="section-card">
+        <div
+          class="section-header d-flex justify-content-between align-items-center"
+        >
+          <span>Recommended Supplier</span>
+
+          <button
+            class="btn btn-sm btn-outline-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#supplierModal"
+          >
+            View Supplier Details
+          </button>
+        </div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="info-label">Supplier Name</div>
+
+              <div class="info-value">ABC Office Supplies</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Contact Person</div>
+
+              <div class="info-value">Juan Dela Cruz</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Contact Number</div>
+
+              <div class="info-value">0917-000-0000</div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="info-label">Address</div>
+
+              <div class="info-value">Lingayen, Pangasinan</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Quotation Reference</div>
+
+              <div class="info-value">QT-2026-016</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AWARD SUMMARY -->
+      <div class="section-card">
+        <div class="section-header">Award Summary</div>
+
+        <div class="section-body">
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>Procurement Item</th>
+                  <th class="text-center">Qty</th>
+                  <th class="text-end">ABC</th>
+                  <th class="text-end">Recommended Amount</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Procurement System</td>
+
+                  <td class="text-center">1 Lot</td>
+
+                  <td class="text-end">₱40,000.00</td>
+
+                  <td class="text-end fw-bold text-success">₱36,500.00</td>
+                </tr>
+
+                <tr class="table-light">
+                  <td colspan="2">
+                    <strong>Total</strong>
+                  </td>
+
+                  <td class="text-end">
+                    <strong>₱40,000.00</strong>
+                  </td>
+
+                  <td class="text-end">
+                    <strong class="text-success"> ₱36,500.00 </strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVALUATION REFERENCE -->
+      <div class="section-card">
+        <div class="section-header">Evaluation & Abstract Reference</div>
+
+        <div class="section-body">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="info-label">Quotations Received</div>
+
+              <div class="info-value">3</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Responsive Quotations</div>
+
+              <div class="info-value">3</div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-label">Lowest Responsive Quotation</div>
+
+              <div class="info-value text-success">₱36,500.00</div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="table-responsive">
+            <table class="table table-sm table-bordered align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>Supplier</th>
+                  <th>Quotation Ref.</th>
+                  <th class="text-end">Amount</th>
+                  <th>Evaluation</th>
+                  <th>Rank</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="table-success">
+                  <td>
+                    <strong>ABC Office Supplies</strong>
+                  </td>
+
+                  <td>QT-2026-016</td>
+
+                  <td class="text-end">₱36,500.00</td>
+
+                  <td>
+                    <span class="badge bg-success"> RESPONSIVE </span>
+                  </td>
+
+                  <td>1</td>
+                </tr>
+
+                <tr>
+                  <td>XYZ Trading</td>
+
+                  <td>QT-2026-015</td>
+
+                  <td class="text-end">₱38,000.00</td>
+
+                  <td>
+                    <span class="badge bg-success"> RESPONSIVE </span>
+                  </td>
+
+                  <td>2</td>
+                </tr>
+
+                <tr>
+                  <td>Juan Trading</td>
+
+                  <td>QT-2026-017</td>
+
+                  <td class="text-end">₱39,500.00</td>
+
+                  <td>
+                    <span class="badge bg-success"> RESPONSIVE </span>
+                  </td>
+
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-3">
+            <button
+              class="btn btn-sm btn-outline-secondary"
+              onclick="viewAbstract()"
+            >
+              View Quotation Abstract
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUPPORTING DOCUMENTS -->
+      <div class="section-card">
+        <div class="section-header">Supporting Documents</div>
+
+        <div class="section-body">
+          <div
+            class="document-row d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <strong>Quotation Abstract</strong>
+
+              <div class="small text-muted">AB-2026-001.pdf</div>
+            </div>
+
+            <div>
+              <button class="btn btn-sm btn-outline-primary">View</button>
+            </div>
+          </div>
+
+          <div
+            class="document-row d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <strong>ABC Office Supplies Quotation</strong>
+
+              <div class="small text-muted">QT-2026-016.pdf</div>
+            </div>
+
+            <div>
+              <button class="btn btn-sm btn-outline-primary">View</button>
+            </div>
+          </div>
+
+          <div
+            class="document-row d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <strong>Evaluation Report</strong>
+
+              <div class="small text-muted">evaluation-report.pdf</div>
+            </div>
+
+            <div>
+              <button class="btn btn-sm btn-outline-primary">View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- APPROVAL HISTORY -->
+      <div class="section-card">
+        <div class="section-header">Recommendation History</div>
+
+        <div class="section-body">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-title">Quotation Evaluation Completed</div>
+
+              <div class="timeline-date">September 02, 2026</div>
+
+              <div class="text-muted small">
+                Three quotations evaluated and found responsive.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-title">Quotation Abstract Submitted</div>
+
+              <div class="timeline-date">September 02, 2026</div>
+
+              <div class="text-muted small">
+                Abstract AB-2026-001 submitted for award review.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-title">
+                Recommendation for Award Prepared
+              </div>
+
+              <div class="timeline-date">September 03, 2026</div>
+
+              <div class="text-muted small">
+                Recommendation prepared for ABC Office Supplies.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STICKY ACTIONS -->
+      <div class="sticky-actions">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-outline-secondary" onclick="goBack()">
+              ← Back
+            </button>
+
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-primary" onclick="saveDraft()">
+                Save Draft
+              </button>
+
+              <button class="btn btn-success" onclick="openSubmitModal()">
+                Submit Recommendation
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUPPLIER MODAL -->
+    <div class="modal fade" id="supplierModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Supplier Details</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="info-label">Supplier Name</div>
+
+                <div class="info-value">ABC Office Supplies</div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="info-label">Business Registration</div>
+
+                <div class="info-value">REG-2026-00123</div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="info-label">Contact Person</div>
+
+                <div class="info-value">Juan Dela Cruz</div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="info-label">Contact Number</div>
+
+                <div class="info-value">0917-000-0000</div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="info-label">Address</div>
+
+                <div class="info-value">Lingayen, Pangasinan</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBMIT MODAL -->
+    <div class="modal fade" id="submitModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Submit Recommendation for Award?</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <p>
+              You are about to submit the Recommendation for Award for approval.
+            </p>
+
+            <div class="alert alert-warning">
+              <strong>Please review the following:</strong>
+
+              <ul class="mb-0 mt-2">
+                <li>
+                  Recommended Supplier:
+                  <strong>ABC Office Supplies</strong>
+                </li>
+
+                <li>
+                  Recommended Amount:
+                  <strong>₱36,500.00</strong>
+                </li>
+
+                <li>
+                  ABC:
+                  <strong>₱40,000.00</strong>
+                </li>
+              </ul>
+            </div>
+
+            <p class="mb-0">
+              Once submitted, the recommendation will be forwarded for approval.
+            </p>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Cancel
+            </button>
+
+            <button class="btn btn-success" onclick="submitRecommendation()">
+              Yes, Submit Recommendation
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title">Recommendation Submitted</h5>
+
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="alert alert-success">
+              <strong>Recommendation for Award submitted successfully.</strong>
+            </div>
+
+            <div class="mb-2">
+              <strong>Status:</strong>
+              <span class="badge bg-warning text-dark"> FOR APPROVAL </span>
+            </div>
+
+            <div class="mb-2">
+              <strong>Recommended Supplier:</strong>
+              ABC Office Supplies
+            </div>
+
+            <div>
+              <strong>Recommended Amount:</strong>
+              ₱36,500.00
+            </div>
+
+            <hr />
+
+            <div class="text-muted small">Next Step: Approval of Award</div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-success" onclick="continueToApproval()">
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      function openSubmitModal() {
+        const modal = new bootstrap.Modal(
+          document.getElementById("submitModal"),
+        );
+
+        modal.show();
+      }
+
+      function submitRecommendation() {
+        const submitModal = bootstrap.Modal.getInstance(
+          document.getElementById("submitModal"),
+        );
+
+        submitModal.hide();
+
+        setTimeout(function () {
+          const successModal = new bootstrap.Modal(
+            document.getElementById("successModal"),
+          );
+
+          successModal.show();
+        }, 300);
+      }
+
+      function saveDraft() {
+        alert("Recommendation for Award draft saved successfully.");
+      }
+
+      function viewAbstract() {
+        window.location.href = "quotation-abstract.html";
+      }
+
+      function goBack() {
+        window.location.href = "quotation-abstract.html";
+      }
+
+      function continueToApproval() {
+        window.location.href = "approval-of-award.html";
+      }
+    </script>
+  </body>
+</html>
